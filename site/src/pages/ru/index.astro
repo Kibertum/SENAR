@@ -1,0 +1,543 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="SENAR — Методология AI-нативной разработки"
+  description="SENAR — методология создания проверенного ПО, когда код пишет AI, а человек контролирует. Открытый стандарт для разработчиков и команд."
+>
+  <!-- Hero: ЧТО ЭТО -->
+  <section class="bg-senar-900 text-white py-24">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-5xl font-extrabold mb-6 tracking-tight">
+        <span class="text-gold-400">S</span>ENAR
+      </h1>
+      <p class="text-2xl font-light text-senar-200 mb-4">
+        Supervised Engineering & Normative AI Regulation
+      </p>
+      <p class="text-xl text-white max-w-3xl mx-auto mb-10 leading-relaxed">
+        Методология создания проверенного ПО, когда код пишет AI, а человек контролирует.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/ru/core/senar-core/" class="px-8 py-3 bg-gold-500 text-senar-900 font-bold rounded-lg hover:bg-gold-400 transition text-lg">
+          SENAR Core (1 час)
+        </a>
+        <a href="/ru/guide/quickstart/" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Быстрый старт (5 мин)
+        </a>
+        <a href="/ru/standard/introduction/" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Полный стандарт
+        </a>
+        <a href="/senar-v1.3-ru.pdf" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Скачать PDF
+        </a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 mt-10 text-xs text-senar-400">
+        <div>v1.3 &middot; 25.03.2026</div>
+        <div>Core: 8 правил &middot; 2 гейта &middot; 2 метрики | Полный: 15 правил &middot; 5 гейтов &middot; 10 метрик</div>
+        <div>CC BY-SA 4.0</div>
+        <div>EN + RU</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Новое в v1.3 — RU-специфичная секция -->
+  <section class="py-12 bg-gold-50 border-b border-gold-200">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-xl font-bold text-senar-900 mb-4 text-center">Новое в версии 1.3</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-sm">
+        <div>
+          <h3 class="font-bold text-senar-900 mb-1">Базовые правила</h3>
+          <p class="text-senar-600">Отдельный документ: 8 правил, 2 контрольные точки, чеклист из 27 пунктов. Самодостаточный &mdash; можно не читать ничего другого.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-senar-900 mb-1">Облегчённый режим</h3>
+          <p class="text-senar-600">Для мелких задач: 4 пункта вместо 9. Полная проверка &mdash; только для критичных участков (авторизация, платежи, данные).</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-senar-900 mb-1">4 уровня готовности</h3>
+          <p class="text-senar-600">Один разработчик &rarr; небольшая команда &rarr; команда &rarr; предприятие. Растёте &mdash; добавляете правила, не переучиваясь.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Проблема -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Проблема</h2>
+      <p class="text-lg text-senar-600 text-center max-w-3xl mx-auto mb-12">
+        AI-инструменты для кода — повсюду. Управление ими — нигде.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-red-50 border border-red-100 rounded-lg p-6">
+          <h3 class="font-bold text-red-800 mb-4">Что происходит без стандарта</h3>
+          <ul class="space-y-3 text-sm text-red-700">
+            <li><strong>Правдоподобный, но неправильный код.</strong> AI получает размытое задание. Выдаёт код, который компилируется, запускается — и делает не то. Вы не замечаете, потому что код выглядит правильным.</li>
+            <li><strong>Самоподтверждающиеся баги.</strong> AI пишет код И тесты к нему. Тесты проходят, потому что проверяют интерпретацию AI, а не ваше требование.</li>
+            <li><strong>Знания испаряются.</strong> 40 минут потрачено на тупик. В следующей сессии AI пробует тот же подход заново. Никто не записал.</li>
+            <li><strong>Нечем измерить.</strong> AI ускоряет работу? Или просто ускоряет появление багов? Данных нет ни в одну сторону.</li>
+          </ul>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-100 rounded-lg p-6">
+          <h3 class="font-bold text-emerald-800 mb-4">Что меняет SENAR</h3>
+          <ul class="space-y-3 text-sm text-emerald-700">
+            <li><strong>Требования до кода.</strong> AI получает структурированный контекст: цель, критерии приёмки, границы. Не вайбы.</li>
+            <li><strong>Проверка по критериям.</strong> Не «выглядит нормально», а каждый критерий проверен независимо — против требования, а не вывода AI.</li>
+            <li><strong>Тупики задокументированы.</strong> Одно предложение: «Подход X не работает, потому что Y». 10 секунд записи — 40 минут экономии в будущих сессиях.</li>
+            <li><strong>Десять метрик показывают правду.</strong> FPSR, Defect Escape Rate, пропускная способность, Lead Time, Adversarial Detection Rate и ещё пять. Вы точно знаете, что AI делает для вас.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ключевая цитата + Self-Consistent Artifact Problem -->
+  <section class="py-20 bg-senar-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <blockquote class="text-2xl text-senar-800 italic border-l-4 border-gold-400 pl-6 mb-10 leading-relaxed">
+        «AI не задаёт уточняющих вопросов &mdash; он молча выбирает интерпретацию.»
+      </blockquote>
+      <p class="text-lg text-senar-700 mb-6">
+        Код компилируется, тесты (написанные тем же AI) проходят, на ревью всё выглядит нормально. Это <strong>проблема самосогласованного артефакта</strong>: AI генерирует код, тесты и документацию, которые идеально согласованы друг с другом &mdash; и все неправильные.
+      </p>
+      <p class="text-lg text-senar-700 mb-6">
+        Все методологии до SENAR &mdash; Scrum, SAFe, Kanban &mdash; были спроектированы для команд людей, которые могут спросить друг друга «ты имел в виду X или Y?» AI не спрашивает.
+      </p>
+      <p class="text-lg text-senar-900 font-semibold">
+        SENAR &mdash; недостающий слой между «я использую AI» и «я создаю проверенное ПО с помощью AI».
+      </p>
+    </div>
+  </section>
+
+  <!-- Чем SENAR отличается: 4 карточки -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Чем SENAR отличается</h2>
+      <p class="text-senar-500 text-center mb-12 max-w-2xl mx-auto">
+        Это не «пишите промпты по ISO». Это структурные проблемы, которые требуют структурных решений.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="border border-senar-100 rounded-xl p-8 hover:border-gold-400 hover:shadow-lg transition">
+          <div class="text-gold-500 font-bold text-sm mb-3 uppercase tracking-wider">Проблема #1</div>
+          <h3 class="text-xl font-bold text-senar-900 mb-3">Самосогласованный артефакт</h3>
+          <p class="text-senar-600 leading-relaxed">
+            AI генерирует код, тесты и документацию, которые согласованы друг с другом &mdash; но не с вашим требованием. Стандартный QA ничего не ловит, потому что тесты проверяют код по интерпретации AI, а не вашей. SENAR разрывает этот цикл: Супервизор проверяет по критериям приёмки, написанным <em>до</em> того, как AI увидел задачу.
+          </p>
+        </div>
+
+        <div class="border border-senar-100 rounded-xl p-8 hover:border-gold-400 hover:shadow-lg transition">
+          <div class="text-gold-500 font-bold text-sm mb-3 uppercase tracking-wider">Принцип #1</div>
+          <h3 class="text-xl font-bold text-senar-900 mb-3">Качество на входе</h3>
+          <p class="text-senar-600 leading-relaxed">
+            Дефект в требовании каскадирует в код, тесты и документацию. AI усиливает это: он не возражает, не спрашивает «вы имели в виду X или Y?», не отмечает неоднозначность. Принцип каскада SENAR: исправь вход, иначе каждый выход заражён. Трёхуровневая иерархия требований (BR &rarr; SR &rarr; TR) &mdash; это не бюрократия, а предотвращение дефектов.
+          </p>
+        </div>
+
+        <div class="border border-senar-100 rounded-xl p-8 hover:border-gold-400 hover:shadow-lg transition">
+          <div class="text-gold-500 font-bold text-sm mb-3 uppercase tracking-wider">Принцип #2</div>
+          <h3 class="text-xl font-bold text-senar-900 mb-3">Документация как рабочий контекст</h3>
+          <p class="text-senar-600 leading-relaxed">
+            Документация &mdash; не бюрократия постфактум. Это рабочий контекст, который AI читает при каждой задаче. Хорошая документация снижает накладные расходы, потому что AI стартует с правильных предположений, а не гадает. Тупики, архитектурные решения, границы области &mdash; они существуют для AI, а не для папки с файлами.
+          </p>
+        </div>
+
+        <div class="border border-senar-100 rounded-xl p-8 hover:border-gold-400 hover:shadow-lg transition">
+          <div class="text-gold-500 font-bold text-sm mb-3 uppercase tracking-wider">Управление</div>
+          <h3 class="text-xl font-bold text-senar-900 mb-3">AI-модель как поставщик</h3>
+          <p class="text-senar-600 leading-relaxed">
+            Когда версия модели меняется &mdash; меняется ваша производственная единица. Это эквивалент смены версии компилятора: базовые показатели нужно перекалибровать, качественные гейты &mdash; перевалидировать, метрики эффективности &mdash; пересчитать. SENAR &mdash; первая методология, которая рассматривает управление AI-моделями как задачу управления цепочкой поставок, а не просто «выберите лучшую модель».
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Быстрый старт: 6 привычек -->
+  <section id="quickstart" class="py-20 bg-senar-900 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-2 text-center">Быстрый старт: 6 привычек, 5 минут</h2>
+      <p class="text-senar-300 mb-10 text-center">Без совещаний. Без сертификаций. Без покупки инструментов. Начните сегодня.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Привычка 1 &middot; До</div>
+          <h3 class="font-semibold mb-2 text-lg">Запишите ЧТО</h3>
+          <p class="text-sm text-senar-300 mb-3">Одно предложение: что сделано, когда задача завершена? Если не можете записать — вы не знаете, что строите.</p>
+          <p class="text-xs text-gold-400 font-medium">Действие: напишите цель до открытия AI-инструмента.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Привычка 2 &middot; До</div>
+          <h3 class="font-semibold mb-2 text-lg">Запишите ГОТОВО</h3>
+          <p class="text-sm text-senar-300 mb-3">Нумерованные критерии приёмки. Проверяемые. «Пользователь может X», а не «система должна быть хорошей». Задайте границы &mdash; скажите AI, что НЕ трогать.</p>
+          <p class="text-xs text-gold-400 font-medium">Действие: напишите 2–5 критериев приёмки до начала кода.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Привычка 3 &middot; Во время</div>
+          <h3 class="font-semibold mb-2 text-lg">Проверьте каждый критерий</h3>
+          <p class="text-sm text-senar-300 mb-3">Проверяйте каждый КП отдельно. Не «выглядит нормально», а «критерий #3 выполнен, потому что я проверил X». Тесты AI не считаются &mdash; они проверяют его интерпретацию.</p>
+          <p class="text-xs text-gold-400 font-medium">Действие: пройдитесь по КП один за другим. Проверяйте, а не бегло смотрите.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Привычка 4 &middot; Во время</div>
+          <h3 class="font-semibold mb-2 text-lg">Фиксируйте тупики</h3>
+          <p class="text-sm text-senar-300 mb-3">Когда подход не работает, запишите одно предложение: «X не работает, потому что Y». Стоит 10 секунд. Экономит 40 минут в следующей сессии.</p>
+          <p class="text-xs text-gold-400 font-medium">Действие: ведите файл тупиков. Одна строка на неудачу.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Привычка 5 &middot; После</div>
+          <h3 class="font-semibold mb-2 text-lg">Тесты + КП = готово</h3>
+          <p class="text-sm text-senar-300 mb-3">Не «я думаю, это работает». CI зелёный, типы чистые, каждый критерий приёмки проверен. Задача сделана или не сделана.</p>
+          <p class="text-xs text-gold-400 font-medium">Действие: не закрывайте задачу, пока CI не пройден и КП не отмечены.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Привычка 6 &middot; После</div>
+          <h3 class="font-semibold mb-2 text-lg">Сохраняйте знания</h3>
+          <p class="text-sm text-senar-300 mb-3">Запишите всё неочевидное, что узнали. Архитектурные решения, подводные камни, обходные пути. AI прочитает это в следующий раз.</p>
+          <p class="text-xs text-gold-400 font-medium">Действие: потратьте 60 секунд на запись того, что узнали.</p>
+        </div>
+      </div>
+
+      <p class="text-center">
+        <a href="/ru/guide/quickstart/" class="px-8 py-3 bg-gold-500 text-senar-900 font-bold rounded-lg hover:bg-gold-400 transition text-lg">
+          Полное руководство по быстрому старту
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- SENAR Core: точка входа -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-gold-50 to-senar-50 border-2 border-gold-400 rounded-2xl p-10 text-center">
+        <div class="text-gold-600 font-bold text-sm uppercase tracking-wider mb-3">Начните здесь</div>
+        <h2 class="text-3xl font-bold text-senar-900 mb-4">SENAR Core</h2>
+        <p class="text-xl text-senar-700 mb-2">8 правил. 2 гейта. 2 метрики. Освоение за 1 час.</p>
+        <p class="text-senar-500 mb-8 max-w-2xl mx-auto">
+          Минимальное, самодостаточное ядро SENAR. Не нужны инструменты. Не нужны совещания. Не нужны роли. Только необходимая дисциплина для AI-разработки.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/ru/core/senar-core/" class="px-8 py-3 bg-gold-500 text-senar-900 font-bold rounded-lg hover:bg-gold-400 transition text-lg">
+            Читать Core (RU)
+          </a>
+          <a href="/en/core/senar-core/" class="px-6 py-3 border border-senar-300 text-senar-600 rounded-lg hover:bg-senar-50 transition">
+            Core (EN)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Выберите уровень -->
+  <section class="py-20 bg-senar-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Выберите уровень</h2>
+      <p class="text-senar-500 text-center mb-10">Начните с Core. Масштабируйте, когда потребуется.</p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-senar-900 text-white">
+              <th class="text-left px-4 py-3 rounded-tl-lg">Возможности</th>
+              <th class="px-4 py-3 text-center border-2 border-gold-400 bg-gold-500 text-senar-900 font-bold">Core</th>
+              <th class="px-4 py-3 text-center">Foundation</th>
+              <th class="px-4 py-3 text-center">Team</th>
+              <th class="px-4 py-3 text-center rounded-tr-lg">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Правила</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">8</td>
+              <td class="px-4 py-3 text-center text-senar-600">11</td>
+              <td class="px-4 py-3 text-center text-senar-600">15</td>
+              <td class="px-4 py-3 text-center text-senar-600">15</td>
+            </tr>
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Контрольные точки</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">2 (Старт/Готово)</td>
+              <td class="px-4 py-3 text-center text-senar-600">3 (QG-0..QG-2)</td>
+              <td class="px-4 py-3 text-center text-senar-600">5 (QG-0..QG-4)</td>
+              <td class="px-4 py-3 text-center text-senar-600">5 + кастомные</td>
+            </tr>
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Метрики</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">2 (FPSR, Dead End Rate)</td>
+              <td class="px-4 py-3 text-center text-senar-600">4</td>
+              <td class="px-4 py-3 text-center text-senar-600">10</td>
+              <td class="px-4 py-3 text-center text-senar-600">10+</td>
+            </tr>
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Роли</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">1</td>
+              <td class="px-4 py-3 text-center text-senar-600">3 (совмещённые)</td>
+              <td class="px-4 py-3 text-center text-senar-600">5 (выделенные)</td>
+              <td class="px-4 py-3 text-center text-senar-600">5 + портфель</td>
+            </tr>
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Церемонии</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">0</td>
+              <td class="px-4 py-3 text-center text-senar-600">3</td>
+              <td class="px-4 py-3 text-center text-senar-600">7</td>
+              <td class="px-4 py-3 text-center text-senar-600">7 + портфель</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-senar-700 rounded-bl-lg">Инструменты</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">Не нужны</td>
+              <td class="px-4 py-3 text-center text-senar-600">Желательно</td>
+              <td class="px-4 py-3 text-center text-senar-600">Нужны</td>
+              <td class="px-4 py-3 text-center text-senar-600 rounded-br-lg">Нужны</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- До и после -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">До и после</h2>
+      <p class="text-senar-500 text-center mb-10 max-w-2xl mx-auto text-sm">
+        Реальные данные: 552 задачи, 38 сессий, один проект (5 сервисов, 2 фронтенда). Честные оговорки включены.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-50 border border-red-100 rounded-lg p-6">
+          <h3 class="font-bold text-red-800 mb-4">Без SENAR</h3>
+          <ul class="space-y-3 text-sm text-red-700">
+            <li>Задачи без критериев приёмки &rarr; AI выдаёт правдоподобный, но неправильный код, который проходит ревью</li>
+            <li>Тупики не фиксируются &rarr; те же провальные подходы повторяются из сессии в сессию</li>
+            <li>Марафонские сессии (6+ часов) &rarr; падение эффективности в 2,7 раза</li>
+            <li>Нет метрик &rarr; нет способа понять, помогает AI или вредит</li>
+            <li>Стоимость: <strong>~$105 за вырвавшийся дефект</strong> в виде трудозатрат на переработку</li>
+          </ul>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-100 rounded-lg p-6">
+          <h3 class="font-bold text-emerald-800 mb-4">С SENAR</h3>
+          <ul class="space-y-3 text-sm text-emerald-700">
+            <li>Каждая задача имеет цель + КП &rarr; <strong>85%+ First-Pass Success Rate</strong></li>
+            <li>Тупики задокументированы &rarr; <strong>100% повторное использование знаний</strong> между сессиями</li>
+            <li>Сессии с контрольными точками &rarr; стабильная, предсказуемая производительность</li>
+            <li>Десять метрик &rarr; вы точно знаете, где AI помогает, а где нет</li>
+            <li>Стоимость: <strong>~5 мин на сессию + 1–3 мин на задачу</strong> накладных расходов</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-senar-50 border border-senar-100 rounded-lg p-6">
+        <h4 class="font-bold text-senar-900 mb-2 text-sm">Честные оговорки</h4>
+        <ul class="text-xs text-senar-600 space-y-1">
+          <li>Данные от одной команды, одного стека, одного AI-инструмента (Claude Code). Ваши результаты будут отличаться.</li>
+          <li>FPSR 85% достигнут на зрелой практике. Первые сессии — ниже (~60–70%), пока привычки формируются.</li>
+          <li>SENAR не делает плохие требования хорошими. Он делает плохие требования видимыми до того, как они стали плохим кодом.</li>
+          <li>Накладные расходы указаны для тех, кто уже пишет хоть какое-то описание задач. Если процесса нет вообще — начальные расходы будут ощутимее.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Четыре документа -->
+  <section class="py-20 bg-senar-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Четыре документа</h2>
+      <p class="text-senar-500 text-center mb-10">Всё что нужно. Ничего лишнего.</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/ru/core/senar-core/" class="block p-6 bg-white border-2 border-gold-400 rounded-lg hover:shadow-md transition group relative">
+          <div class="absolute -top-3 right-4 bg-gold-500 text-senar-900 text-xs font-bold px-3 py-1 rounded-full">Начните здесь</div>
+          <h3 class="font-bold text-lg text-senar-900 mb-2 group-hover:text-gold-600">Core</h3>
+          <p class="text-sm text-senar-500 mb-4">Базовые правила. Освоение менее чем за 1 час.</p>
+          <ul class="text-xs text-senar-400 space-y-1.5">
+            <li>8 правил дисциплинированной AI-разработки</li>
+            <li>2 контрольные точки (Старт + Готово)</li>
+            <li>2 метрики (FPSR + Dead End Rate)</li>
+            <li>Чеклист из 27 пунктов</li>
+            <li>Инструменты не нужны</li>
+            <li>Самодостаточный, не зависит от инструментов</li>
+          </ul>
+        </a>
+        <a href="/ru/standard/introduction/" class="block p-6 bg-white border border-senar-100 rounded-lg hover:border-gold-400 hover:shadow-md transition group">
+          <h3 class="font-bold text-lg text-senar-900 mb-2 group-hover:text-gold-600">Стандарт</h3>
+          <p class="text-sm text-senar-500 mb-4">Полный нормативный документ. Ищете что-то попроще? <span class="text-gold-600 font-medium">См. Core.</span></p>
+          <ul class="text-xs text-senar-400 space-y-1.5">
+            <li>5 ролей (Супервизор, Контекст-архитектор, Инженер знаний, Менеджер потока, Инженер верификации)</li>
+            <li>5 единиц работы (Эпик &rarr; Стори &rarr; Задача &rarr; Подзадача &rarr; Сессия)</li>
+            <li>7 церемоний (Планирование, Ревью, Ретро...)</li>
+            <li>5 контрольных точек с критериями входа/выхода</li>
+            <li>10 метрик с формулами и порогами</li>
+            <li>15 нормативных правил</li>
+            <li>4 конфигурации (Core / Foundation / Team / Enterprise)</li>
+            <li>Иерархия требований: BR &rarr; SR &rarr; TR</li>
+            <li>Инструментирование агента: профили, скрипты, интерфейс</li>
+          </ul>
+        </a>
+        <a href="/ru/guide/quickstart/" class="block p-6 bg-white border border-senar-100 rounded-lg hover:border-gold-400 hover:shadow-md transition group">
+          <h3 class="font-bold text-lg text-senar-900 mb-2 group-hover:text-gold-600">Руководство</h3>
+          <p class="text-sm text-senar-500 mb-4">«Зачем» и «как». Философия, паттерны, практика.</p>
+          <ul class="text-xs text-senar-400 space-y-1.5">
+            <li>Быстрый старт (5 минут, 6 привычек)</li>
+            <li>6 столпов AI-нативной разработки</li>
+            <li>Инженерия требований для AI</li>
+            <li>Чеклист ревью AI из 23 пунктов</li>
+            <li>Режимы отказа и антипаттерны</li>
+            <li>Паттерны масштабирования (Core &rarr; Foundation &rarr; Team &rarr; Enterprise)</li>
+            <li>Онбординг новых членов команды</li>
+          </ul>
+        </a>
+        <a href="/ru/reference/glossary/" class="block p-6 bg-white border border-senar-100 rounded-lg hover:border-gold-400 hover:shadow-md transition group">
+          <h3 class="font-bold text-lg text-senar-900 mb-2 group-hover:text-gold-600">Справочник</h3>
+          <p class="text-sm text-senar-500 mb-4">Таблицы, модели, маппинг совместимости.</p>
+          <ul class="text-xs text-senar-400 space-y-1.5">
+            <li>Глоссарий из 44 терминов с формальными определениями</li>
+            <li>Модель эффективности и формулы затрат</li>
+            <li>Фреймворк управления AI-моделями</li>
+            <li>Коэффициенты масштабирования и размер команды</li>
+            <li>Чеклист требований к инструментам</li>
+            <li>Совместимость с ISO 9001 / SAFe</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Для кого -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Для кого</h2>
+      <p class="text-senar-500 text-center mb-10">Одна методология. Четыре уровня церемоний.</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="border border-senar-100 rounded-lg p-6 hover:border-gold-400 transition">
+          <div class="text-gold-500 font-bold text-2xl mb-1">Core</div>
+          <p class="text-sm font-medium text-senar-900 mb-3">1 разработчик</p>
+          <p class="text-sm text-senar-500 mb-4">Соло-разработчик с Claude Code, Cursor, Copilot или любым AI-инструментом. Начните с быстрого старта. Совещания не нужны.</p>
+          <div class="border-t border-senar-100 pt-3 mt-3">
+            <ul class="text-xs text-senar-400 space-y-1">
+              <li>2 контрольные точки</li>
+              <li>2 метрики (FPSR, Dead End Rate)</li>
+              <li>8 правил</li>
+              <li>~5 мин накладных на сессию</li>
+              <li>~1–3 мин на задачу</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border border-senar-100 rounded-lg p-6 hover:border-gold-400 transition">
+          <div class="text-gold-500 font-bold text-2xl mb-1">Foundation</div>
+          <p class="text-sm font-medium text-senar-900 mb-3">1–3 разработчика</p>
+          <p class="text-sm text-senar-500 mb-4">Совмещённые роли, управление сессиями, ежемесячный аудит качества. Мост между соло-практикой и командной координацией.</p>
+          <div class="border-t border-senar-100 pt-3 mt-3">
+            <ul class="text-xs text-senar-400 space-y-1">
+              <li>11 правил</li>
+              <li>4 метрики</li>
+              <li>3 церемонии</li>
+              <li>QG-0 + QG-2</li>
+              <li>3 совмещённые роли</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-2 border-gold-400 rounded-lg p-6 shadow-md relative">
+          <div class="absolute -top-3 right-4 bg-gold-500 text-senar-900 text-xs font-bold px-3 py-1 rounded-full">Рекомендуем</div>
+          <div class="text-gold-500 font-bold text-2xl mb-1">Team</div>
+          <p class="text-sm font-medium text-senar-900 mb-3">3–10 разработчиков</p>
+          <p class="text-sm text-senar-500 mb-4">Полная иерархия требований (BR &rarr; SR &rarr; TR). Выделенные роли Супервизора и Ревьюера. Библиотека требований. Федерация проектов.</p>
+          <div class="border-t border-gold-200 pt-3 mt-3">
+            <ul class="text-xs text-senar-400 space-y-1">
+              <li>5 контрольных точек</li>
+              <li>10 метрик</li>
+              <li>Все 7 церемоний</li>
+              <li>Межпроектная координация</li>
+              <li>База знаний с отслеживанием переиспользования</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border border-senar-100 rounded-lg p-6 hover:border-gold-400 transition">
+          <div class="text-gold-500 font-bold text-2xl mb-1">Enterprise</div>
+          <p class="text-sm font-medium text-senar-900 mb-3">10+ разработчиков</p>
+          <p class="text-sm text-senar-500 mb-4">Требования-как-код с CI-валидацией. Аудиторские следы для комплаенса. Управление бюджетом AI-расходов на уровне портфеля.</p>
+          <div class="border-t border-senar-100 pt-3 mt-3">
+            <ul class="text-xs text-senar-400 space-y-1">
+              <li>Полная модель управления</li>
+              <li>Управление AI-моделями как поставщиками</li>
+              <li>Совместимость с ISO 9001</li>
+              <li>Паттерны интеграции с SAFe</li>
+              <li>Модель эффективности с формулами затрат</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAUSIK: Реализация фреймворка -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-senar-50 to-white border-2 border-senar-200 rounded-2xl p-10">
+        <div class="flex flex-col md:flex-row md:items-center gap-8">
+          <div class="flex-1">
+            <div class="text-senar-500 font-bold text-sm uppercase tracking-wider mb-3">Эталонная реализация</div>
+            <h2 class="text-3xl font-bold text-senar-900 mb-4">TAUSIK</h2>
+            <p class="text-lg text-senar-700 mb-2">
+              Task Agent Unified Supervision, Inspection &amp; Knowledge
+            </p>
+            <p class="text-senar-600 mb-6">
+              Open-source фреймворк, который автоматически применяет правила SENAR. Контрольные точки физически блокируют агента от пропуска шагов &mdash; не рекомендации, а принуждение. Работает с Claude Code, Cursor и Windsurf.
+            </p>
+            <ul class="text-sm text-senar-600 space-y-2 mb-6">
+              <li><strong>15 автоматических проверок</strong> &mdash; pytest, ruff, tsc, eslint, cargo, go vet</li>
+              <li><strong>33 структурированных скилла</strong> &mdash; /plan, /ship, /review, /audit, /debug</li>
+              <li><strong>80 MCP-инструментов</strong> &mdash; программный доступ к памяти проекта</li>
+              <li><strong>6 автоматических метрик</strong> &mdash; FPSR, DER, пропускная способность, lead time</li>
+              <li><strong>Ноль зависимостей</strong> &mdash; только стандартная библиотека Python 3.11+</li>
+            </ul>
+            <div class="flex flex-wrap gap-4">
+              <a href="https://github.com/Kibertum/tausik-core" class="px-6 py-3 bg-senar-900 text-white font-bold rounded-lg hover:bg-senar-800 transition">
+                GitHub
+              </a>
+              <a href="https://github.com/Kibertum/tausik-core/blob/main/docs/en/quickstart.md" class="px-6 py-3 border border-senar-300 text-senar-600 rounded-lg hover:bg-senar-50 transition">
+                Быстрый старт
+              </a>
+            </div>
+          </div>
+          <div class="md:w-80 flex-shrink-0">
+            <div class="bg-senar-900 text-senar-300 rounded-lg p-5 font-mono text-xs leading-relaxed">
+              <div class="text-senar-500 mb-2"># Установка в 3 команды</div>
+              <div><span class="text-gold-400">$</span> git submodule add \</div>
+              <div class="pl-4">github.com/Kibertum/tausik-core \</div>
+              <div class="pl-4">.tausik-lib</div>
+              <div class="mt-1"><span class="text-gold-400">$</span> python .tausik-lib/bootstrap/bootstrap.py \</div>
+              <div class="pl-4">--smart --init my-project</div>
+              <div class="mt-1"><span class="text-gold-400">$</span> <span class="text-senar-500"># перезапустите IDE &mdash; готово</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-senar-900 text-white">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">AI пишет код.<br/>Вы задаёте стандарт.</h2>
+      <p class="text-senar-300 mb-10 text-lg">
+        Начните с Core. Масштабируйте до полного управления. Открытый стандарт, бесплатный навсегда.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center mb-8">
+        <a href="/ru/core/senar-core/" class="px-8 py-3 bg-gold-500 text-senar-900 font-bold rounded-lg hover:bg-gold-400 transition text-lg">
+          Начать с Core
+        </a>
+        <a href="/ru/guide/quickstart/" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Быстрый старт
+        </a>
+        <a href="/ru/standard/introduction/" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Полный стандарт
+        </a>
+      </div>
+      <p class="text-xs text-senar-400">
+        SENAR v1.3 &middot; 25.03.2026 &middot; CC BY-SA 4.0 &middot; Нормативный язык по <a href="https://www.rfc-editor.org/rfc/rfc2119" class="underline hover:text-senar-200">RFC 2119</a>
+      </p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,22 @@
+{
+  "name": "site",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "sync-content": "node ../scripts/sync-site-content.js",
+    "dev": "npm run sync-content && astro dev",
+    "build": "npm run sync-content && astro build && npx pagefind --site dist",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.1",
+    "@pagefind/default-ui": "^1.4.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.0.8",
+    "tailwindcss": "^4.2.2"
+  }
+}

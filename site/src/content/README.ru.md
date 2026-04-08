@@ -41,26 +41,6 @@ SENAR — практический инженерный стандарт для 
 - **15 правил** — конкретные инженерные правила, а не абстрактные принципы
 - **4 конфигурации** — Базовая (Core), Начальная (Foundation), Командная (Team), Корпоративная (Enterprise) — внедряйте постепенно
 
-
-## Эталонная реализация: TAUSIK
-
-**[TAUSIK](https://github.com/Kibertum/tausik-core)** (Task Agent Unified Supervision, Inspection & Knowledge) — open-source фреймворк, который автоматически применяет правила SENAR.
-
-Контрольные точки физически блокируют агента от пропуска шагов — не рекомендации, а принуждение.
-
-- **Кроссплатформенность:** Claude Code, Cursor, Windsurf
-- **15 автоматических проверок:** pytest, ruff, tsc, eslint, cargo, go vet
-- **33 структурированных скилла:** /plan, /ship, /review, /audit, /debug
-- **80 MCP-инструментов** для программного доступа к памяти проекта
-- **6 автоматических метрик:** FPSR, DER, пропускная способность, lead time
-- **Ноль зависимостей:** только стандартная библиотека Python 3.11+
-
-```bash
-git submodule add https://github.com/Kibertum/tausik-core .tausik-lib
-python .tausik-lib/bootstrap/bootstrap.py --smart --init my-project
-# перезапустите IDE — готово
-```
-
 ## Для кого
 
 - Инженерные команды, использующие AI-ассистенты для написания кода (Cursor, Claude Code, Copilot и др.)

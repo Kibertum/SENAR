@@ -1,0 +1,127 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — SENAR</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="min-h-screen bg-senar-50 flex flex-col font-sans">
+
+  <!-- Navbar minimal -->
+  <nav class="bg-white/95 backdrop-blur border-b border-senar-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="/en/" class="font-bold text-xl text-senar-900"><span class="text-gold-500">S</span>ENAR</a>
+      <div class="flex items-center gap-3">
+        <a href="/en/" class="text-sm px-3 py-1 rounded-full border border-senar-200 text-senar-600 hover:bg-senar-50 transition">English</a>
+        <a href="/ru/" class="text-sm px-3 py-1 rounded-full border border-senar-200 text-senar-600 hover:bg-senar-50 transition">Русский</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="flex-1 flex items-center justify-center px-4 py-12">
+    <div class="max-w-2xl w-full">
+
+      <!-- 404 Hero -->
+      <div class="text-center mb-12">
+        <p class="text-[8rem] sm:text-[10rem] font-extrabold leading-none text-senar-100 select-none">404</p>
+        <h1 class="text-2xl sm:text-3xl font-bold text-senar-900 -mt-6 mb-3">
+          Page not found <span class="text-senar-400">·</span> Страница не найдена
+        </h1>
+        <p class="text-senar-500 max-w-md mx-auto">
+          Like a Dead End in development — now you know, and you won't look here again.
+        </p>
+        <p class="text-senar-400 text-sm mt-1">
+          Тупик. Теперь вы знаете, и сюда больше не вернётесь.
+        </p>
+      </div>
+
+      <!-- Navigation cards -->
+      <div class="grid sm:grid-cols-2 gap-4 mb-10">
+
+        <!-- Quick Start -->
+        <a href="/en/guide/quickstart/" class="group block p-5 bg-white rounded-xl border border-senar-100 hover:border-gold-400 hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-gold-50 text-gold-600 text-lg">&#9889;</span>
+            <h2 class="font-semibold text-senar-900 group-hover:text-gold-600 transition">Quick Start</h2>
+          </div>
+          <p class="text-sm text-senar-500">New here? Start with the 5-minute guide.</p>
+          <p class="text-xs text-senar-400 mt-1">Быстрый старт за 5 минут</p>
+        </a>
+
+        <!-- Core (8 Rules) -->
+        <a href="/en/core/senar-core/" class="group block p-5 bg-white rounded-xl border border-senar-100 hover:border-gold-400 hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-senar-50 text-senar-600 text-lg">&#9670;</span>
+            <h2 class="font-semibold text-senar-900 group-hover:text-gold-600 transition">SENAR Core</h2>
+          </div>
+          <p class="text-sm text-senar-500">8 rules, 2 gates, 2 metrics — the essential minimum.</p>
+          <p class="text-xs text-senar-400 mt-1">8 правил, 2 гейта, 2 метрики</p>
+        </a>
+
+        <!-- Full Standard -->
+        <a href="/en/standard/introduction/" class="group block p-5 bg-white rounded-xl border border-senar-100 hover:border-gold-400 hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-senar-50 text-senar-600 text-lg">&#128220;</span>
+            <h2 class="font-semibold text-senar-900 group-hover:text-gold-600 transition">Full Standard</h2>
+          </div>
+          <p class="text-sm text-senar-500">Roles, ceremonies, quality gates, metrics — the complete framework.</p>
+          <p class="text-xs text-senar-400 mt-1">Полный стандарт с ролями и процессами</p>
+        </a>
+
+        <!-- Guides -->
+        <a href="/en/guide/philosophy/" class="group block p-5 bg-white rounded-xl border border-senar-100 hover:border-gold-400 hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-senar-50 text-senar-600 text-lg">&#128218;</span>
+            <h2 class="font-semibold text-senar-900 group-hover:text-gold-600 transition">Guides</h2>
+          </div>
+          <p class="text-sm text-senar-500">Philosophy, walkthroughs, checklists, and practical examples.</p>
+          <p class="text-xs text-senar-400 mt-1">Философия, примеры, чек-листы</p>
+        </a>
+
+      </div>
+
+      <!-- Russian section -->
+      <div class="bg-white rounded-xl border border-senar-100 p-6 mb-10">
+        <h3 class="font-semibold text-senar-900 mb-3">Читаете на русском?</h3>
+        <div class="flex flex-wrap gap-3">
+          <a href="/ru/guide/quickstart/" class="text-sm px-4 py-2 rounded-lg bg-senar-50 text-senar-700 hover:bg-senar-100 transition">Быстрый старт</a>
+          <a href="/ru/core/senar-core/" class="text-sm px-4 py-2 rounded-lg bg-senar-50 text-senar-700 hover:bg-senar-100 transition">SENAR Core</a>
+          <a href="/ru/standard/introduction/" class="text-sm px-4 py-2 rounded-lg bg-senar-50 text-senar-700 hover:bg-senar-100 transition">Стандарт</a>
+          <a href="/ru/guide/philosophy/" class="text-sm px-4 py-2 rounded-lg bg-senar-50 text-senar-700 hover:bg-senar-100 transition">Руководства</a>
+          <a href="/ru/reference/glossary/" class="text-sm px-4 py-2 rounded-lg bg-senar-50 text-senar-700 hover:bg-senar-100 transition">Глоссарий</a>
+        </div>
+      </div>
+
+      <!-- Home buttons -->
+      <div class="flex gap-4 justify-center">
+        <a href="/en/" class="px-6 py-2.5 bg-senar-900 text-white rounded-lg hover:bg-senar-800 transition font-medium">
+          Go to Home
+        </a>
+        <a href="/ru/" class="px-6 py-2.5 border border-senar-300 text-senar-700 rounded-lg hover:bg-senar-100 transition font-medium">
+          На главную
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer minimal -->
+  <footer class="border-t border-senar-100 py-6 text-center text-sm text-senar-400">
+    <a href="https://senar.tech" class="hover:text-senar-600 transition">senar.tech</a>
+    <span class="mx-2">&middot;</span>
+    CC BY-SA 4.0
+  </footer>
+
+</body>
+</html>

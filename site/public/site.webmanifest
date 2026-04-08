@@ -1,0 +1,21 @@
+{
+  "name": "SENAR — AI-Native Development Standard",
+  "short_name": "SENAR",
+  "description": "Open methodology for human-AI collaborative software development",
+  "start_url": "/en/",
+  "display": "browser",
+  "background_color": "#0F172A",
+  "theme_color": "#1E3A5F",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+}

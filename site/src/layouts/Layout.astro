@@ -1,0 +1,125 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Search from '../components/Search.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { title = t('site.title'), description = t('site.description') } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://senar.tech');
+const otherLang = lang === 'en' ? 'ru' : 'en';
+const alternatePath = Astro.url.pathname.replace(`/${lang}`, `/${otherLang}`);
+const alternateURL = new URL(alternatePath, 'https://senar.tech');
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "name": title,
+  "description": description,
+  "url": canonicalURL.href,
+  "inLanguage": ["en", "ru"],
+  "author": [
+    { "@type": "Person", "name": "Andrey Yumashev" },
+    { "@type": "Person", "name": "Vadim Soglaev" }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kibertum",
+    "url": "https://kibertum.ru"
+  },
+  "datePublished": "2026-03-25",
+  "version": "1.3",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "keywords": ["AI development methodology", "software engineering standard", "human-AI collaboration", "code quality", "AI safety"]
+});
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <!-- Google Analytics + Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFV3TQHSBP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WFV3TQHSBP');
+    gtag('config', 'GT-NBXFKMDB');
+    gtag('config', 'G-8EQ2BKTMXM');
+  </script>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL.href} />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang={lang} href={canonicalURL.href} />
+  <link rel="alternate" hreflang={otherLang} href={alternateURL.href} />
+  <link rel="alternate" hreflang="x-default" href={new URL('/en/', 'https://senar.tech').href} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL.href} />
+  <meta property="og:site_name" content="SENAR" />
+  <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : 'en_US'} />
+  <meta property="og:locale:alternate" content={lang === 'ru' ? 'en_US' : 'ru_RU'} />
+  <meta property="og:image" content="https://senar.tech/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://senar.tech/og-image.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- Yandex -->
+  <meta name="yandex-verification" content="35933a15a003e49a" />
+  <meta name="theme-color" content="#1E3A5F" />
+
+  <!-- Yandex.Metrika -->
+  <script type="text/javascript" is:inline>
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108190609', 'ym');
+    ym(108190609, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108190609" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={jsonLd} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body class="min-h-screen flex flex-col">
+  <Navbar />
+  <main class="flex-1">
+    <slot />
+  </main>
+  <Footer />
+  <Search />
+</body>
+</html>

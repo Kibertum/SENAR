@@ -1,0 +1,22 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="border-t border-senar-100 bg-senar-50 py-8 mt-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-senar-500">
+      <div>
+        SENAR v1.3 | 25.03.2026 | {t('footer.authors')}
+      </div>
+      <div class="flex items-center gap-4">
+        <a href={`/${lang}/changelog/`} class="hover:text-senar-700 transition">
+          {lang === 'ru' ? 'История изменений' : 'Changelog'}
+        </a>
+        <span>{t('footer.license')}</span>
+      </div>
+    </div>
+  </div>
+</footer>

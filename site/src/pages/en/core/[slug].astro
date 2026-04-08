@@ -1,0 +1,34 @@
+---
+import { getCollection, render } from 'astro:content';
+import DocLayout from '../../../layouts/DocLayout.astro';
+import { coreSections, getNavItems, getPrevNext } from '../../../i18n/navigation';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('core');
+  return coreSections.map((section) => {
+    const entry = entries.find((e) => e.id === section.file);
+    return {
+      params: { slug: section.slug },
+      props: { entry, sectionMeta: section },
+    };
+  });
+}
+
+const { entry, sectionMeta } = Astro.props;
+const items = getNavItems(coreSections, 'en', 'core');
+const { prev, next } = getPrevNext(coreSections, sectionMeta.slug, 'en', 'core');
+
+const { Content } = entry ? await render(entry) : { Content: null };
+---
+
+<DocLayout
+  title={sectionMeta.title.en}
+  pageTitle={sectionMeta.pageTitle?.en}
+  section="core"
+  items={items}
+  currentSlug={sectionMeta.slug}
+  prevItem={prev}
+  nextItem={next}
+>
+  {Content ? <Content /> : <p class="text-senar-500">Content not found.</p>}
+</DocLayout>

@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="История изменений | SENAR — Стандарт разработки с AI"
+  description="История версий стандарта SENAR — Supervised Engineering & Normative AI Regulation."
+>
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl font-bold text-senar-900 mb-2">История изменений</h1>
+      <p class="text-senar-500 mb-12">История версий стандарта SENAR.</p>
+
+      <!-- v1.3 -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-4">
+          <h2 class="text-2xl font-bold text-senar-900">v1.3</h2>
+          <span class="text-xs font-medium px-2 py-0.5 bg-gold-100 text-gold-700 rounded-full">Актуальная</span>
+          <span class="text-sm text-senar-400">25.03.2026</span>
+        </div>
+
+        <h3 class="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-3">Добавлено</h3>
+        <ul class="space-y-2 text-sm text-senar-700 mb-6">
+          <li><strong>Правило 15: Верификация качества AI-кода</strong> — три уровня проверки (L1 Автоматизированная, L2 Самопроверка, L3 Состязательная рецензия) с градацией по уровню риска</li>
+          <li><strong>Метрика 10: Adversarial Detection Rate (ADR)</strong> — плотность критических дефектов на проверенную задачу (ранее Vibe Code Rate)</li>
+          <li><strong>Р5.5 Структурированный инструментальный протокол</strong> — протоколо-агностичное требование к взаимодействию агента с платформой</li>
+          <li><strong>Р5.6 Делегирование агенту и изоляция выполнения</strong> — риски, обязательные практики, каноничный паттерн</li>
+          <li><strong>Р5.7 Федерация</strong> — масштабирование SENAR на множество проектов: независимость, координация, маршрутизация знаний, федеративные метрики</li>
+          <li><strong>Чек-лист AI-ревью из 23 пунктов</strong> — расширен с 13 пунктов, 3 уровня приоритета; паттерны скрытых дефектов из состязательных аудитов</li>
+          <li><strong>Шаблон Стандартов кода</strong> — шаблон организационных стандартов кода на основе реальных дефектов</li>
+          <li>8 новых определений: Состязательная рецензия, Делегирование агенту, Скрытый дефект, ADR и другие</li>
+          <li>Калибровка KCR, политика без epoch-фильтрации, дисклеймер для multi-session метрик</li>
+        </ul>
+
+        <h3 class="text-sm font-bold text-blue-700 uppercase tracking-wider mb-3">Изменено</h3>
+        <ul class="space-y-2 text-sm text-senar-700 mb-6">
+          <li><strong>Правило 12 Гигиена контекста</strong> — повышено до ДОЛЖЕН для учётных данных/персональных данных на ВСЕХ конфигурациях</li>
+          <li><strong>Нейтральность к стеку</strong> — удалены все названия вендоров/продуктов из нормативного текста</li>
+          <li>QG-2: &laquo;types clean&raquo; &rarr; &laquo;статический анализ пройден&raquo;</li>
+          <li>Счётчики конфигураций: 15 правил (было 14), 10 метрик (было 9)</li>
+        </ul>
+
+        <h3 class="text-sm font-bold text-purple-700 uppercase tracking-wider mb-3">Рецензирование</h3>
+        <ul class="space-y-2 text-sm text-senar-700">
+          <li>3 раунда состязательного ревью 9 независимыми рецензентами (методолог, эксперт по безопасности, практик)</li>
+          <li>Все критические замечания устранены: нейтральность к стеку, человек в цикле, безопасность федерации</li>
+        </ul>
+      </div>
+
+      <hr class="border-senar-100 my-8" />
+
+      <!-- v1.2 -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-4">
+          <h2 class="text-2xl font-bold text-senar-900">v1.2</h2>
+          <span class="text-sm text-senar-400">23.03.2026</span>
+        </div>
+
+        <h3 class="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-3">Добавлено</h3>
+        <ul class="space-y-2 text-sm text-senar-700 mb-6">
+          <li><strong>Раздел 5 «Инструментарий агента»</strong> — новый раздел: уровни управления, профили агента, управление скриптами, программный интерфейс, переносимость</li>
+          <li><strong>Правило 14: Управление изменениями скриптов</strong> — версионирование, ревью, возможность отката</li>
+          <li><strong>Руководство: Настройка агента на практике</strong> — новая глава с примерами для Claude Code, Codex, Cursor</li>
+          <li>Расширена роль Контекст-Архитектора: проектирование профилей агента, управление скриптами</li>
+          <li>Требования к инструментарию: раздел управления конфигурацией агента</li>
+          <li>История изменений (этот документ)</li>
+          <li>Сайт: мобильная навигация, страница истории изменений</li>
+        </ul>
+
+        <h3 class="text-sm font-bold text-blue-700 uppercase tracking-wider mb-3">Изменено</h3>
+        <ul class="space-y-2 text-sm text-senar-700 mb-6">
+          <li>Перенумерация разделов: Р5&rarr;Р6, Р6&rarr;Р7, ... Р12&rarr;Р13</li>
+          <li>Обновлены все перекрёстные ссылки</li>
+        </ul>
+
+        <h3 class="text-sm font-bold text-amber-700 uppercase tracking-wider mb-3">Исправлено</h3>
+        <ul class="space-y-2 text-sm text-senar-700">
+          <li>Ошибка 404 при переходе по ссылке «Стандарт» в навигации</li>
+          <li>Улучшение литературного качества русского перевода</li>
+        </ul>
+      </div>
+
+      <hr class="border-senar-100 my-8" />
+
+      <!-- v1.1 -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-4">
+          <h2 class="text-2xl font-bold text-senar-900">v1.1</h2>
+          <span class="text-sm text-senar-400">22.03.2026</span>
+        </div>
+
+        <h3 class="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-3">Добавлено</h3>
+        <ul class="space-y-2 text-sm text-senar-700">
+          <li>Иерархия требований: BR &rarr; SR &rarr; TR</li>
+          <li>Усилена контрольная точка QG-0: прослеживаемость требований</li>
+          <li>QG-1: Контрольная точка требований (только Команда+)</li>
+          <li>Правило 10: Прослеживаемость требований</li>
+          <li>Правило 11: Документация кода как контекст</li>
+          <li>Правило 12: Гигиена контекста</li>
+          <li>Правило 13: Управление AI-моделями</li>
+          <li>Главы руководства: Быстрый старт, Инженерия требований, Внедрение в legacy, Практический пример, Интеграция с инструментами</li>
+          <li>Положение о соответствии (самооценка, коллегиальная оценка, независимый аудит)</li>
+          <li>Роли Предприятия (Менеджер Портфеля, Главный Супервизор)</li>
+        </ul>
+      </div>
+
+      <hr class="border-senar-100 my-8" />
+
+      <!-- v1.0 -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-4">
+          <h2 class="text-2xl font-bold text-senar-900">v1.0</h2>
+          <span class="text-sm text-senar-400">21.03.2026</span>
+        </div>
+
+        <h3 class="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-3">Первый выпуск</h3>
+        <ul class="space-y-2 text-sm text-senar-700">
+          <li>12 разделов, 5 ролей, 5 единиц работы</li>
+          <li>7 регламентов, 5 контрольных точек качества, 9 метрик, 11 правил</li>
+          <li>3 конфигурации: Базовый, Команда, Предприятие</li>
+          <li>Руководство: 6 глав</li>
+          <li>Справочник: глоссарий, масштабирование, эффективность, управление, инструментарий</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</Layout>

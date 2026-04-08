@@ -21,8 +21,8 @@ Then read the [Quick Start Guide](guide/00-quickstart.md) for a hands-on walkthr
 
 ## PDF Downloads
 
-- [SENAR v1.3 — Full Document, English (PDF)](https://github.com/Kibertum/SENAR/releases/latest/download/SENAR-v1.3-en.pdf)
-- [SENAR v1.3 — Full Document, Russian (PDF)](https://github.com/Kibertum/SENAR/releases/latest/download/SENAR-v1.3-ru.pdf)
+- [SENAR v1.3 — Full Document, English (PDF)](docs/SENAR-v1.3-en.pdf) — Standard + Guide + Reference + Core
+- [SENAR v1.3 — Full Document, Russian (PDF)](docs/SENAR-v1.3-ru.pdf) — Standard + Guide + Reference + Core
 
 ## Documentation
 
@@ -40,6 +40,26 @@ Then read the [Quick Start Guide](guide/00-quickstart.md) for a hands-on walkthr
 - **Quality Gates** — automated checkpoints (QG-0 before work, QG-2 before merge)
 - **15 Rules** — concrete engineering rules, not abstract principles
 - **4 Configurations** — Core, Foundation, Team, Enterprise — adopt incrementally
+
+
+## Reference Implementation: TAUSIK
+
+**[TAUSIK](https://github.com/Kibertum/tausik-core)** (Task Agent Unified Supervision, Inspection & Knowledge) is the open-source framework that enforces SENAR rules automatically.
+
+Quality gates that physically block agents from skipping steps — not recommendations, but enforcement.
+
+- **Cross-IDE:** Claude Code, Cursor, Windsurf
+- **15 automated checks:** pytest, ruff, tsc, eslint, cargo, go vet
+- **33 structured skills:** /plan, /ship, /review, /audit, /debug
+- **80 MCP tools** for programmatic project memory access
+- **6 automatic metrics:** FPSR, DER, throughput, lead time
+- **Zero core dependencies:** Python 3.11+ standard library only
+
+```bash
+git submodule add https://github.com/Kibertum/tausik-core .tausik-lib
+python .tausik-lib/bootstrap/bootstrap.py --smart --init my-project
+# restart IDE — done
+```
 
 ## Who Is This For
 

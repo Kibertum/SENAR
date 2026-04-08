@@ -1,0 +1,37 @@
+# SENAR — Supervised Engineering & Normative AI Regulation
+
+> SENAR is a practical engineering standard for teams where AI agents write code alongside human engineers. It defines roles, ceremonies, quality gates, and metrics for human-AI collaborative software development. Version 1.3.
+
+## Authors
+Andrey Yumashev, Vadim Soglaev
+
+## Docs
+
+- [SENAR Core — 8 Rules Quick Start](https://senar.tech/en/core): 8 essential rules, 2 quality gates, 2 metrics. Start here.
+- [Standard: Introduction](https://senar.tech/en/standard/00-introduction): What SENAR is, values, document set
+- [Standard: Roles](https://senar.tech/en/standard/04-roles): Supervisor, Context Architect, Knowledge Engineer, Flow Manager, Verification Engineer
+- [Standard: Quality Gates](https://senar.tech/en/standard/08-quality-gates): QG-0 through QG-4
+- [Standard: Metrics](https://senar.tech/en/standard/09-metrics): FPSR, DER, Throughput, Lead Time, KCR, MIR, Cost per Task, Cost Predictability, Cycle Time, ADR
+- [Standard: 15 Rules](https://senar.tech/en/standard/10-rules): Operational rules for AI-assisted development
+- [Standard: Configurations](https://senar.tech/en/standard/11-configurations): Core → Foundation → Team → Enterprise
+- [Guide: Quick Start](https://senar.tech/en/guide/00-quickstart): 5-minute adoption guide
+- [Guide: AI Review Checklist](https://senar.tech/en/guide/02-ai-review-checklist): 28-item verification checklist
+- [Guide: Worked Example](https://senar.tech/en/guide/09-worked-example): Full task walkthrough with code
+- [Reference: Glossary](https://senar.tech/en/reference/01-glossary): 44 terms defined
+- [Reference: Governance & Compliance](https://senar.tech/en/reference/04-governance-compliance): ISO 27001, SOC 2, GDPR, EU AI Act, NIST AI RMF mappings
+
+## Key Concepts
+
+- **Context-over-Code**: AI effectiveness depends on context quality, not prompt engineering
+- **FPSR (First Pass Success Rate)**: Primary metric — percentage of tasks completed correctly on first attempt
+- **Quality Gates**: QG-0 (before work), QG-2 (before merge) — automated enforcement points
+- **Supervisor**: Human engineer who directs and verifies AI agent output
+- **Pair**: One Supervisor + one or more AI agents — the basic unit of AI-assisted development
+- **4 Configurations**: Core (1 pair) → Foundation (1-3) → Team (3-10) → Enterprise (10+)
+
+## Optional
+
+- [Full PDF (English)](https://senar.tech/senar-v1.3-en.pdf)
+- [Full PDF (Russian)](https://senar.tech/senar-v1.3-ru.pdf)
+- [GitHub Repository](https://github.com/Kibertum/SENAR)
+- [Website](https://senar.tech)

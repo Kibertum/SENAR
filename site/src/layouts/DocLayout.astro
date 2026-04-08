@@ -1,0 +1,113 @@
+---
+import Layout from './Layout.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  pageTitle?: string;
+  section: 'core' | 'standard' | 'guide' | 'reference';
+  items: { slug: string; title: string; href: string }[];
+  currentSlug?: string;
+  prevItem?: { title: string; href: string } | null;
+  nextItem?: { title: string; href: string } | null;
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { title, pageTitle, section, items, currentSlug, prevItem, nextItem } = Astro.props;
+
+const siteSuffix = lang === 'ru'
+  ? 'SENAR — Стандарт разработки с AI'
+  : 'SENAR — AI Development Standard';
+const fullPageTitle = pageTitle
+  ? (pageTitle.includes('|') ? pageTitle : `${pageTitle} | ${siteSuffix}`)
+  : `${title} | ${siteSuffix}`;
+
+const sectionLabels = {
+  core: { en: 'Core', ru: 'Основы' },
+  standard: { en: 'Standard', ru: 'Стандарт' },
+  guide: { en: 'Guide', ru: 'Руководство' },
+  reference: { en: 'Reference', ru: 'Справочник' },
+};
+
+const sectionDescriptions: Record<string, Record<string, string>> = {
+  core: {
+    en: 'SENAR Core: 8 rules for AI-assisted development',
+    ru: 'SENAR Core: 8 правил разработки с AI',
+  },
+  standard: {
+    en: `SENAR Standard v1.3: ${title}`,
+    ru: `Стандарт SENAR v1.3: ${title}`,
+  },
+  guide: {
+    en: `SENAR Guide: ${title}`,
+    ru: `Руководство SENAR: ${title}`,
+  },
+  reference: {
+    en: `SENAR Reference: ${title}`,
+    ru: `Справочник SENAR: ${title}`,
+  },
+};
+
+const description = sectionDescriptions[section]?.[lang] ?? sectionDescriptions[section]?.['en'] ?? title;
+---
+
+<Layout title={fullPageTitle} description={description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-senar-400 mb-6">
+      <a href={`/${lang}/`} class="hover:text-senar-600">SENAR</a>
+      <span class="mx-1">/</span>
+      <span class="text-senar-500">{sectionLabels[section][lang]}</span>
+      <span class="mx-1">/</span>
+      <span class="text-senar-700">{title}</span>
+    </nav>
+
+    <div class="flex gap-8">
+      <!-- Sidebar -->
+      <aside class="hidden lg:block w-64 shrink-0">
+        <div class="sticky top-20">
+          <h3 class="text-xs font-semibold uppercase text-senar-400 mb-3 tracking-wider">
+            {sectionLabels[section][lang]}
+          </h3>
+          <nav class="space-y-1">
+            {items.map((item) => (
+              <a
+                href={item.href}
+                class:list={[
+                  'block px-3 py-1.5 text-sm rounded-md transition',
+                  item.slug === currentSlug
+                    ? 'bg-senar-50 text-senar-900 font-medium border-l-2 border-gold-500'
+                    : 'text-senar-500 hover:text-senar-700 hover:bg-senar-50',
+                ]}
+              >
+                {item.title}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <article class="flex-1 min-w-0 prose max-w-none">
+        <slot />
+      </article>
+    </div>
+
+    <!-- Prev/Next navigation -->
+    {(prevItem || nextItem) && (
+      <div class="flex justify-between mt-12 pt-6 border-t border-senar-100">
+        {prevItem ? (
+          <a href={prevItem.href} class="text-sm text-senar-500 hover:text-senar-700">
+            ← {prevItem.title}
+          </a>
+        ) : <div />}
+        {nextItem ? (
+          <a href={nextItem.href} class="text-sm text-senar-500 hover:text-senar-700">
+            {nextItem.title} →
+          </a>
+        ) : <div />}
+      </div>
+    )}
+  </div>
+</Layout>

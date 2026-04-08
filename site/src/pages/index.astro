@@ -1,0 +1,6 @@
+---
+// Root redirect with Accept-Language detection
+const acceptLang = Astro.request.headers.get('accept-language') || '';
+const lang = acceptLang.toLowerCase().startsWith('ru') ? 'ru' : 'en';
+return Astro.redirect(`/${lang}/`);
+---

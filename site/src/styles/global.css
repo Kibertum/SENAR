@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-senar-900: #0F1B2D;
+  --color-senar-800: #1A2B45;
+  --color-senar-700: #1E3A5F;
+  --color-senar-600: #2A4A73;
+  --color-senar-500: #3B6491;
+  --color-senar-400: #5A8AB5;
+  --color-senar-300: #8BB3D4;
+  --color-senar-200: #B8D4EA;
+  --color-senar-100: #E3EFF8;
+  --color-senar-50: #F2F7FC;
+
+  --color-gold-500: #D4A843;
+  --color-gold-400: #E0BD6A;
+  --color-gold-300: #EBD28F;
+  --color-gold-200: #F5E7B7;
+  --color-gold-100: #FBF4E0;
+
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-senar-900);
+  background: white;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Prose for standard/guide content */
+.prose h1 { font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+.prose h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--color-senar-100); padding-bottom: 0.5rem; }
+.prose h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.prose p { margin-bottom: 1rem; }
+.prose ul, .prose ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+.prose li { margin-bottom: 0.25rem; }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.9rem; }
+.prose th { background: var(--color-senar-50); padding: 0.5rem 0.75rem; text-align: left; font-weight: 600; border-bottom: 2px solid var(--color-senar-200); }
+.prose td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-senar-100); }
+.prose code { background: var(--color-senar-50); padding: 0.15rem 0.35rem; border-radius: 0.25rem; font-size: 0.875em; font-family: var(--font-mono); }
+.prose pre { background: var(--color-senar-900); color: var(--color-senar-100); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.5rem; }
+.prose pre code { background: none; padding: 0; color: inherit; }
+.prose blockquote { border-left: 4px solid var(--color-gold-500); padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: var(--color-senar-600); }
+.prose strong { font-weight: 700; }
+
+/* Cross-link styling */
+.prose a { color: var(--color-senar-500); text-decoration: underline; text-underline-offset: 2px; }
+.prose a:hover { color: var(--color-senar-700); }
+
+/* SHALL/SHOULD/MAY highlighting */
+.prose strong:has(+ text) { }

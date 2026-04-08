@@ -1,0 +1,522 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="SENAR — AI-Native Development Standard"
+  description="SENAR defines how Supervisors manage AI agents to produce verified, traceable software. The missing layer between 'I use AI' and 'I produce verified software with AI'."
+>
+  <!-- Hero: WHAT IS THIS -->
+  <section class="bg-senar-900 text-white py-24">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-5xl font-extrabold mb-6 tracking-tight">
+        <span class="text-gold-400">S</span>ENAR
+      </h1>
+      <p class="text-2xl font-light text-senar-200 mb-4">
+        Supervised Engineering & Normative AI Regulation
+      </p>
+      <p class="text-xl text-white max-w-3xl mx-auto mb-10 leading-relaxed">
+        The methodology for producing verified software when AI writes the code and humans supervise.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/en/core/senar-core/" class="px-8 py-3 bg-gold-500 text-senar-900 font-bold rounded-lg hover:bg-gold-400 transition text-lg">
+          SENAR Core (1 hour)
+        </a>
+        <a href="/en/guide/quickstart/" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Quick Start (5 min)
+        </a>
+        <a href="/en/standard/introduction/" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Full Standard
+        </a>
+        <a href="/senar-v1.3-en.pdf" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Download PDF
+        </a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 mt-10 text-xs text-senar-400">
+        <div>v1.3 &middot; 25.03.2026</div>
+        <div>Core: 8 rules &middot; 2 gates &middot; 2 metrics | Full: 15 rules &middot; 5 gates &middot; 10 metrics</div>
+        <div>CC BY-SA 4.0</div>
+        <div>EN + RU</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">The Problem</h2>
+      <p class="text-lg text-senar-600 text-center max-w-3xl mx-auto mb-12">
+        AI coding tools are everywhere. Governance for them is nowhere.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-red-50 border border-red-100 rounded-lg p-6">
+          <h3 class="font-bold text-red-800 mb-4">What happens without a standard</h3>
+          <ul class="space-y-3 text-sm text-red-700">
+            <li><strong>Plausible wrong code.</strong> You give AI a vague prompt. It produces code that compiles, runs, and does the wrong thing. You don't notice because it looks right.</li>
+            <li><strong>Self-validating bugs.</strong> AI writes code AND the tests. The tests pass because they test the AI's misunderstanding, not your requirement.</li>
+            <li><strong>Knowledge evaporates.</strong> You spend 40 minutes discovering that approach X doesn't work. Next session, the AI tries approach X again. Nobody wrote it down.</li>
+            <li><strong>No way to measure.</strong> Is AI making you faster? Or just making bugs faster? You have no data either way.</li>
+          </ul>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-100 rounded-lg p-6">
+          <h3 class="font-bold text-emerald-800 mb-4">What SENAR changes</h3>
+          <ul class="space-y-3 text-sm text-emerald-700">
+            <li><strong>Requirements before code.</strong> AI receives structured context: goal, acceptance criteria, scope boundaries. Not vibes.</li>
+            <li><strong>Human verifies against criteria.</strong> Not "looks right" but each acceptance criterion checked independently against the requirement, not the AI's output.</li>
+            <li><strong>Dead ends documented.</strong> One sentence: "Approach X fails because Y." Prevents hours of repeated failure across sessions.</li>
+            <li><strong>Ten metrics tell the truth.</strong> First-Pass Success Rate, Defect Escape Rate, Throughput, Lead Time, Adversarial Detection Rate, and five more. You know exactly what AI is doing for you.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE KILLER QUOTE + SELF-CONSISTENT ARTIFACT PROBLEM -->
+  <section class="py-20 bg-senar-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <blockquote class="text-2xl text-senar-800 italic border-l-4 border-gold-400 pl-6 mb-10 leading-relaxed">
+        "AI does not ask clarifying questions &mdash; it picks an interpretation silently."
+      </blockquote>
+      <p class="text-lg text-senar-700 mb-6">
+        The resulting code compiles, passes the tests the AI wrote (which test the wrong behavior), and looks correct on review. This is the <strong>self-consistent artifact problem</strong>: AI generates code, tests, and documentation that are perfectly consistent with each other &mdash; and all wrong.
+      </p>
+      <p class="text-lg text-senar-700 mb-6">
+        Every methodology before SENAR &mdash; Scrum, SAFe, Kanban &mdash; was designed for teams of humans who can ask each other "did you mean X or Y?" AI doesn't ask.
+      </p>
+      <p class="text-lg text-senar-900 font-semibold">
+        SENAR is the missing layer between "I use AI" and "I produce verified software with AI."
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT MAKES SENAR DIFFERENT: 4 Cards -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">What Makes SENAR Different</h2>
+      <p class="text-senar-500 text-center mb-12 max-w-2xl mx-auto">
+        This is not "write good prompts in ISO language." These are structural problems that require structural solutions.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="border border-senar-100 rounded-xl p-8 hover:border-gold-400 hover:shadow-lg transition">
+          <div class="text-gold-500 font-bold text-sm mb-3 uppercase tracking-wider">Problem #1</div>
+          <h3 class="text-xl font-bold text-senar-900 mb-3">Self-Consistent Artifact Problem</h3>
+          <p class="text-senar-600 leading-relaxed">
+            AI generates code, tests, and docs that agree with each other &mdash; but not with your requirement. Standard QA catches nothing because the tests validate the code against the AI's interpretation, not yours. SENAR breaks this loop: the Supervisor verifies against acceptance criteria written <em>before</em> the AI saw the task.
+          </p>
+        </div>
+
+        <div class="border border-senar-100 rounded-xl p-8 hover:border-gold-400 hover:shadow-lg transition">
+          <div class="text-gold-500 font-bold text-sm mb-3 uppercase tracking-wider">Principle #1</div>
+          <h3 class="text-xl font-bold text-senar-900 mb-3">Quality at Input</h3>
+          <p class="text-senar-600 leading-relaxed">
+            A defect in a requirement cascades to code, tests, and documentation. AI amplifies this because it doesn't push back, doesn't ask "did you mean X or Y?" and doesn't flag ambiguity. SENAR's cascade principle: fix inputs, or every output is contaminated. The 3-level requirement hierarchy (BR &rarr; SR &rarr; TR) is not bureaucracy &mdash; it's defect prevention.
+          </p>
+        </div>
+
+        <div class="border border-senar-100 rounded-xl p-8 hover:border-gold-400 hover:shadow-lg transition">
+          <div class="text-gold-500 font-bold text-sm mb-3 uppercase tracking-wider">Principle #2</div>
+          <h3 class="text-xl font-bold text-senar-900 mb-3">Documentation as Active Context</h3>
+          <p class="text-senar-600 leading-relaxed">
+            Code docs are not post-hoc bureaucracy. They are working context that the AI reads on every task. Good docs reduce per-task overhead because the AI starts with correct assumptions instead of guessing. Dead ends, architecture decisions, scope boundaries &mdash; they exist for the AI's benefit, not a filing cabinet.
+          </p>
+        </div>
+
+        <div class="border border-senar-100 rounded-xl p-8 hover:border-gold-400 hover:shadow-lg transition">
+          <div class="text-gold-500 font-bold text-sm mb-3 uppercase tracking-wider">Governance</div>
+          <h3 class="text-xl font-bold text-senar-900 mb-3">AI Model as Supplier</h3>
+          <p class="text-senar-600 leading-relaxed">
+            When your model version changes, your production unit changes. This is equivalent to a compiler version change: baselines must be recalibrated, quality gates re-validated, and efficiency metrics re-baselined. SENAR is the first methodology to treat AI model governance as a supply chain management problem, not just "pick the best model."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK START: 6 Habits -->
+  <section id="quickstart" class="py-20 bg-senar-900 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-2 text-center">Quick Start: 6 Habits, 5 Minutes</h2>
+      <p class="text-senar-300 mb-10 text-center">No meetings. No certifications. No tools to buy. Start today.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Habit 1 &middot; Before</div>
+          <h3 class="font-semibold mb-2 text-lg">Write the WHAT</h3>
+          <p class="text-sm text-senar-300 mb-3">One sentence: what is done when this task is done? If you can't write it, you don't know what you're building.</p>
+          <p class="text-xs text-gold-400 font-medium">Action: Write a goal sentence before you open the AI tool.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Habit 2 &middot; Before</div>
+          <h3 class="font-semibold mb-2 text-lg">Write the DONE</h3>
+          <p class="text-sm text-senar-300 mb-3">Numbered acceptance criteria. Testable. "User can X" not "system should be good." Set scope boundaries &mdash; tell the AI what NOT to touch.</p>
+          <p class="text-xs text-gold-400 font-medium">Action: Write 2-5 acceptance criteria before code starts.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Habit 3 &middot; During</div>
+          <h3 class="font-semibold mb-2 text-lg">Verify each criterion</h3>
+          <p class="text-sm text-senar-300 mb-3">Check each AC independently. Not "looks right" but "criterion #3 is satisfied because I tested X." The AI's tests don't count &mdash; they test the AI's interpretation.</p>
+          <p class="text-xs text-gold-400 font-medium">Action: Go through AC one by one. Check, don't glance.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Habit 4 &middot; During</div>
+          <h3 class="font-semibold mb-2 text-lg">Record dead ends</h3>
+          <p class="text-sm text-senar-300 mb-3">When an approach fails, write one sentence: "X fails because Y." Costs 10 seconds. Saves 40 minutes next session.</p>
+          <p class="text-xs text-gold-400 font-medium">Action: Keep a dead-ends file. One line per failure.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Habit 5 &middot; After</div>
+          <h3 class="font-semibold mb-2 text-lg">Tests pass + AC met = done</h3>
+          <p class="text-sm text-senar-300 mb-3">Not "I think it works." CI green, types clean, every acceptance criterion checked. The task is done or it isn't.</p>
+          <p class="text-xs text-gold-400 font-medium">Action: Don't close a task until CI passes and AC are checked off.</p>
+        </div>
+        <div class="bg-senar-800 rounded-lg p-6">
+          <div class="text-gold-400 font-bold text-xs uppercase tracking-wider mb-3">Habit 6 &middot; After</div>
+          <h3 class="font-semibold mb-2 text-lg">Capture knowledge</h3>
+          <p class="text-sm text-senar-300 mb-3">Write down anything non-obvious you learned. Architecture decisions, gotchas, workarounds. The AI reads these next time.</p>
+          <p class="text-xs text-gold-400 font-medium">Action: Spend 60 seconds writing what you learned.</p>
+        </div>
+      </div>
+
+      <p class="text-center">
+        <a href="/en/guide/quickstart/" class="px-8 py-3 bg-gold-500 text-senar-900 font-bold rounded-lg hover:bg-gold-400 transition text-lg">
+          Full Quick Start Guide
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- SENAR CORE: NEW ENTRY POINT -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-gold-50 to-senar-50 border-2 border-gold-400 rounded-2xl p-10 text-center">
+        <div class="text-gold-600 font-bold text-sm uppercase tracking-wider mb-3">Start Here</div>
+        <h2 class="text-3xl font-bold text-senar-900 mb-4">SENAR Core</h2>
+        <p class="text-xl text-senar-700 mb-2">8 rules. 2 gates. 2 metrics. Adopt in 1 hour.</p>
+        <p class="text-senar-500 mb-8 max-w-2xl mx-auto">
+          The minimal, self-contained subset of SENAR. No tooling required. No meetings. No roles to assign. Just the essential discipline for AI-assisted development.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/en/core/senar-core/" class="px-8 py-3 bg-gold-500 text-senar-900 font-bold rounded-lg hover:bg-gold-400 transition text-lg">
+            Read Core (EN)
+          </a>
+          <a href="/ru/core/senar-core/" class="px-6 py-3 border border-senar-300 text-senar-600 rounded-lg hover:bg-senar-50 transition">
+            Core (RU)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE: Core vs Team vs Enterprise -->
+  <section class="py-20 bg-senar-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Choose Your Level</h2>
+      <p class="text-senar-500 text-center mb-10">Start with Core. Scale when you need to.</p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-senar-900 text-white">
+              <th class="text-left px-4 py-3 rounded-tl-lg">Feature</th>
+              <th class="px-4 py-3 text-center border-2 border-gold-400 bg-gold-500 text-senar-900 font-bold">Core</th>
+              <th class="px-4 py-3 text-center">Foundation</th>
+              <th class="px-4 py-3 text-center">Team</th>
+              <th class="px-4 py-3 text-center rounded-tr-lg">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Rules</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">8</td>
+              <td class="px-4 py-3 text-center text-senar-600">11</td>
+              <td class="px-4 py-3 text-center text-senar-600">15</td>
+              <td class="px-4 py-3 text-center text-senar-600">15</td>
+            </tr>
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Quality Gates</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">2 (Start/Done)</td>
+              <td class="px-4 py-3 text-center text-senar-600">3 (QG-0..QG-2)</td>
+              <td class="px-4 py-3 text-center text-senar-600">5 (QG-0..QG-4)</td>
+              <td class="px-4 py-3 text-center text-senar-600">5 + custom</td>
+            </tr>
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Metrics</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">2 (FPSR, Dead End Rate)</td>
+              <td class="px-4 py-3 text-center text-senar-600">4</td>
+              <td class="px-4 py-3 text-center text-senar-600">10</td>
+              <td class="px-4 py-3 text-center text-senar-600">10+</td>
+            </tr>
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Roles</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">1</td>
+              <td class="px-4 py-3 text-center text-senar-600">3 (combined)</td>
+              <td class="px-4 py-3 text-center text-senar-600">5 (dedicated)</td>
+              <td class="px-4 py-3 text-center text-senar-600">5 + portfolio</td>
+            </tr>
+            <tr class="border-b border-senar-100">
+              <td class="px-4 py-3 font-medium text-senar-700">Ceremonies</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">0</td>
+              <td class="px-4 py-3 text-center text-senar-600">3</td>
+              <td class="px-4 py-3 text-center text-senar-600">7</td>
+              <td class="px-4 py-3 text-center text-senar-600">7 + portfolio</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-senar-700 rounded-bl-lg">Tooling required</td>
+              <td class="px-4 py-3 text-center font-bold text-gold-600 border-x border-gold-100 bg-gold-50">None</td>
+              <td class="px-4 py-3 text-center text-senar-600">Recommended</td>
+              <td class="px-4 py-3 text-center text-senar-600">Required</td>
+              <td class="px-4 py-3 text-center text-senar-600 rounded-br-lg">Required</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Before and After</h2>
+      <p class="text-senar-500 text-center mb-10 max-w-2xl mx-auto text-sm">
+        Real data from 552 tasks across 38 sessions. Single-team project (5 services, 2 frontends). Honest caveats included.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-red-50 border border-red-100 rounded-lg p-6">
+          <h3 class="font-bold text-red-800 mb-4">Without SENAR</h3>
+          <ul class="space-y-3 text-sm text-red-700">
+            <li>Tasks without acceptance criteria &rarr; AI produces plausible wrong code that passes review</li>
+            <li>No dead ends &rarr; same failed approaches retried session after session</li>
+            <li>Marathon sessions (6+ hours) &rarr; 2.7x efficiency drop vs. focused sessions</li>
+            <li>No metrics &rarr; no way to tell if AI is helping or hurting</li>
+            <li>Cost: <strong>~$105 per escaped defect</strong> in rework time</li>
+          </ul>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-100 rounded-lg p-6">
+          <h3 class="font-bold text-emerald-800 mb-4">With SENAR</h3>
+          <ul class="space-y-3 text-sm text-emerald-700">
+            <li>Every task has goal + acceptance criteria &rarr; <strong>85%+ First-Pass Success Rate</strong></li>
+            <li>Dead ends documented &rarr; <strong>100% knowledge reuse</strong> across sessions</li>
+            <li>Sessions capped at natural breakpoints &rarr; consistent, predictable output</li>
+            <li>Ten metrics tracked &rarr; you know exactly where AI helps and where it doesn't</li>
+            <li>Cost: <strong>~5 min per session + 1-3 min per task</strong> overhead</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-senar-50 border border-senar-100 rounded-lg p-6">
+        <h4 class="font-bold text-senar-900 mb-2 text-sm">Honest caveats</h4>
+        <ul class="text-xs text-senar-600 space-y-1">
+          <li>Data is from one team, one stack, one AI tool (Claude Code). Your results will vary.</li>
+          <li>The 85% FPSR was achieved at maturity. Early sessions were lower (~60-70%) as practices were being established.</li>
+          <li>SENAR doesn't make bad requirements good. It makes bad requirements visible before they become bad code.</li>
+          <li>Overhead numbers assume you're already writing some form of task description. If you currently use no process at all, initial overhead will feel higher.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE DOCUMENTS -->
+  <section class="py-20 bg-senar-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Four Documents</h2>
+      <p class="text-senar-500 text-center mb-10">Everything you need. Nothing you don't.</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/en/core/senar-core/" class="block p-6 bg-white border-2 border-gold-400 rounded-lg hover:shadow-md transition group relative">
+          <div class="absolute -top-3 right-4 bg-gold-500 text-senar-900 text-xs font-bold px-3 py-1 rounded-full">Start Here</div>
+          <h3 class="font-bold text-lg text-senar-900 mb-2 group-hover:text-gold-600">Core</h3>
+          <p class="text-sm text-senar-500 mb-4">The essential rules. Adopt in under 1 hour.</p>
+          <ul class="text-xs text-senar-400 space-y-1.5">
+            <li>8 rules for disciplined AI development</li>
+            <li>2 quality gates (Start + Done)</li>
+            <li>2 metrics (FPSR + Dead End Rate)</li>
+            <li>27-item verification checklist</li>
+            <li>No tooling required</li>
+            <li>Self-contained, tool-agnostic</li>
+          </ul>
+        </a>
+        <a href="/en/standard/introduction/" class="block p-6 bg-white border border-senar-100 rounded-lg hover:border-gold-400 hover:shadow-md transition group">
+          <h3 class="font-bold text-lg text-senar-900 mb-2 group-hover:text-gold-600">Standard</h3>
+          <p class="text-sm text-senar-500 mb-4">The full normative document. Looking for a simpler starting point? <span class="text-gold-600 font-medium">See Core.</span></p>
+          <ul class="text-xs text-senar-400 space-y-1.5">
+            <li>5 roles (Supervisor, Context Architect, Knowledge Engineer, Flow Manager, Verification Engineer)</li>
+            <li>5 units of work (Epic &rarr; Story &rarr; Task &rarr; Subtask &rarr; Session)</li>
+            <li>7 ceremonies (Planning, Review, Retro...)</li>
+            <li>5 quality gates with entry/exit criteria</li>
+            <li>10 metrics with formulas and thresholds</li>
+            <li>15 normative rules</li>
+            <li>4 configurations (Core / Foundation / Team / Enterprise)</li>
+            <li>Requirement hierarchy: BR &rarr; SR &rarr; TR</li>
+            <li>Agent Instrumentation: profiles, scripts, interface</li>
+          </ul>
+        </a>
+        <a href="/en/guide/quickstart/" class="block p-6 bg-white border border-senar-100 rounded-lg hover:border-gold-400 hover:shadow-md transition group">
+          <h3 class="font-bold text-lg text-senar-900 mb-2 group-hover:text-gold-600">Guide</h3>
+          <p class="text-sm text-senar-500 mb-4">The "why" and "how." Philosophy, patterns, practical training.</p>
+          <ul class="text-xs text-senar-400 space-y-1.5">
+            <li>Quick Start (5 minutes, 6 habits)</li>
+            <li>6 pillars of AI-native development</li>
+            <li>Requirements engineering for AI</li>
+            <li>23-item AI review checklist</li>
+            <li>Failure modes and anti-patterns</li>
+            <li>Scaling patterns (Core &rarr; Foundation &rarr; Team &rarr; Enterprise)</li>
+            <li>Onboarding new team members</li>
+          </ul>
+        </a>
+        <a href="/en/reference/glossary/" class="block p-6 bg-white border border-senar-100 rounded-lg hover:border-gold-400 hover:shadow-md transition group">
+          <h3 class="font-bold text-lg text-senar-900 mb-2 group-hover:text-gold-600">Reference</h3>
+          <p class="text-sm text-senar-500 mb-4">Lookup tables, models, compliance mapping.</p>
+          <ul class="text-xs text-senar-400 space-y-1.5">
+            <li>44-term glossary with formal definitions</li>
+            <li>Efficiency model and cost formulas</li>
+            <li>AI model governance framework</li>
+            <li>Scaling ratios and team sizing</li>
+            <li>Tooling requirements checklist</li>
+            <li>ISO 9001 / SAFe compatibility notes</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IS IT FOR -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-senar-900 mb-4 text-center">Who Is It For</h2>
+      <p class="text-senar-500 text-center mb-10">Same methodology. Four levels of ceremony.</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="border border-senar-100 rounded-lg p-6 hover:border-gold-400 transition">
+          <div class="text-gold-500 font-bold text-2xl mb-1">Core</div>
+          <p class="text-sm font-medium text-senar-900 mb-3">1 developer</p>
+          <p class="text-sm text-senar-500 mb-4">Solo developer using Claude Code, Cursor, Copilot, or any AI coding tool. Start with the Quick Start guide. No meetings required.</p>
+          <div class="border-t border-senar-100 pt-3 mt-3">
+            <ul class="text-xs text-senar-400 space-y-1">
+              <li>2 quality gates</li>
+              <li>2 metrics (FPSR, Dead End Rate)</li>
+              <li>8 rules</li>
+              <li>~5 min session overhead</li>
+              <li>~1-3 min per task overhead</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border border-senar-100 rounded-lg p-6 hover:border-gold-400 transition">
+          <div class="text-gold-500 font-bold text-2xl mb-1">Foundation</div>
+          <p class="text-sm font-medium text-senar-900 mb-3">1-3 developers</p>
+          <p class="text-sm text-senar-500 mb-4">Combined roles, session management, monthly quality sweep. The bridge between solo practice and team coordination.</p>
+          <div class="border-t border-senar-100 pt-3 mt-3">
+            <ul class="text-xs text-senar-400 space-y-1">
+              <li>11 rules</li>
+              <li>4 metrics</li>
+              <li>3 ceremonies</li>
+              <li>QG-0 + QG-2</li>
+              <li>3 combined roles</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-2 border-gold-400 rounded-lg p-6 shadow-md relative">
+          <div class="absolute -top-3 right-4 bg-gold-500 text-senar-900 text-xs font-bold px-3 py-1 rounded-full">Recommended</div>
+          <div class="text-gold-500 font-bold text-2xl mb-1">Team</div>
+          <p class="text-sm font-medium text-senar-900 mb-3">3-10 developers</p>
+          <p class="text-sm text-senar-500 mb-4">Full requirement hierarchy (BR &rarr; SR &rarr; TR). Dedicated Supervisor and Reviewer roles. Requirement library. Federation across projects.</p>
+          <div class="border-t border-gold-200 pt-3 mt-3">
+            <ul class="text-xs text-senar-400 space-y-1">
+              <li>5 quality gates</li>
+              <li>10 metrics</li>
+              <li>All 7 ceremonies</li>
+              <li>Cross-project coordination</li>
+              <li>Knowledge base with reuse tracking</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border border-senar-100 rounded-lg p-6 hover:border-gold-400 transition">
+          <div class="text-gold-500 font-bold text-2xl mb-1">Enterprise</div>
+          <p class="text-sm font-medium text-senar-900 mb-3">10+ developers</p>
+          <p class="text-sm text-senar-500 mb-4">Requirements-as-code with CI validation. Audit trails for compliance. Portfolio-level AI cost tracking and budget governance.</p>
+          <div class="border-t border-senar-100 pt-3 mt-3">
+            <ul class="text-xs text-senar-400 space-y-1">
+              <li>Full governance model</li>
+              <li>AI model supplier management</li>
+              <li>ISO 9001 compatible</li>
+              <li>SAFe integration patterns</li>
+              <li>Efficiency model with cost formulas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAUSIK: Reference Implementation -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-senar-50 to-white border-2 border-senar-200 rounded-2xl p-10">
+        <div class="flex flex-col md:flex-row md:items-center gap-8">
+          <div class="flex-1">
+            <div class="text-senar-500 font-bold text-sm uppercase tracking-wider mb-3">Reference Implementation</div>
+            <h2 class="text-3xl font-bold text-senar-900 mb-4">TAUSIK</h2>
+            <p class="text-lg text-senar-700 mb-2">
+              Task Agent Unified Supervision, Inspection &amp; Knowledge
+            </p>
+            <p class="text-senar-600 mb-6">
+              Open-source framework that enforces SENAR rules automatically. Quality gates that physically block agents from skipping steps &mdash; not recommendations, but enforcement. Works with Claude Code, Cursor, and Windsurf.
+            </p>
+            <ul class="text-sm text-senar-600 space-y-2 mb-6">
+              <li><strong>15 automated checks</strong> &mdash; pytest, ruff, tsc, eslint, cargo, go vet</li>
+              <li><strong>33 structured skills</strong> &mdash; /plan, /ship, /review, /audit, /debug</li>
+              <li><strong>80 MCP tools</strong> &mdash; programmatic access to project memory</li>
+              <li><strong>6 automatic metrics</strong> &mdash; FPSR, DER, throughput, lead time</li>
+              <li><strong>Zero core dependencies</strong> &mdash; Python 3.11+ standard library only</li>
+            </ul>
+            <div class="flex flex-wrap gap-4">
+              <a href="https://github.com/Kibertum/tausik-core" class="px-6 py-3 bg-senar-900 text-white font-bold rounded-lg hover:bg-senar-800 transition">
+                GitHub
+              </a>
+              <a href="https://github.com/Kibertum/tausik-core/blob/main/docs/en/quickstart.md" class="px-6 py-3 border border-senar-300 text-senar-600 rounded-lg hover:bg-senar-50 transition">
+                Quick Start
+              </a>
+            </div>
+          </div>
+          <div class="md:w-80 flex-shrink-0">
+            <div class="bg-senar-900 text-senar-300 rounded-lg p-5 font-mono text-xs leading-relaxed">
+              <div class="text-senar-500 mb-2"># Install in 3 commands</div>
+              <div><span class="text-gold-400">$</span> git submodule add \</div>
+              <div class="pl-4">github.com/Kibertum/tausik-core \</div>
+              <div class="pl-4">.tausik-lib</div>
+              <div class="mt-1"><span class="text-gold-400">$</span> python .tausik-lib/bootstrap/bootstrap.py \</div>
+              <div class="pl-4">--smart --init my-project</div>
+              <div class="mt-1"><span class="text-gold-400">$</span> <span class="text-senar-500"># restart IDE &mdash; done</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-senar-900 text-white">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">AI writes the code.<br/>You set the standard.</h2>
+      <p class="text-senar-300 mb-10 text-lg">
+        Start with Core. Scale to full governance. Open standard, free forever.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center mb-8">
+        <a href="/en/core/senar-core/" class="px-8 py-3 bg-gold-500 text-senar-900 font-bold rounded-lg hover:bg-gold-400 transition text-lg">
+          Start with Core
+        </a>
+        <a href="/en/guide/quickstart/" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Quick Start Guide
+        </a>
+        <a href="/en/standard/introduction/" class="px-6 py-3 border border-senar-400 text-senar-200 rounded-lg hover:bg-senar-800 transition">
+          Full Standard
+        </a>
+      </div>
+      <p class="text-xs text-senar-400">
+        SENAR v1.3 &middot; 25.03.2026 &middot; CC BY-SA 4.0 &middot; Normative language per <a href="https://www.rfc-editor.org/rfc/rfc2119" class="underline hover:text-senar-200">RFC 2119</a>
+      </p>
+    </div>
+  </section>
+</Layout>

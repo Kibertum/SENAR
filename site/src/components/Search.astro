@@ -1,0 +1,59 @@
+---
+import { getLangFromUrl } from '../i18n/ui';
+const lang = getLangFromUrl(Astro.url);
+---
+
+<div id="search-overlay" class="hidden fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] bg-black/60 backdrop-blur-sm">
+  <div class="bg-white rounded-xl shadow-2xl w-full max-w-xl mx-4 flex flex-col" style="max-height: 75vh;">
+    <div class="p-5 overflow-y-auto flex-1" id="pagefind-container"></div>
+    <div class="px-5 pb-3 text-xs text-senar-400 border-t border-senar-100 pt-2 flex justify-between">
+      <span><kbd class="px-1.5 py-0.5 bg-senar-50 rounded">Esc</kbd> {lang === 'ru' ? 'закрыть' : 'close'}</span>
+      <span><kbd class="px-1.5 py-0.5 bg-senar-50 rounded">/</kbd> {lang === 'ru' ? 'открыть' : 'open'}</span>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  var pfLoaded = false;
+  function openSearch() {
+    var o = document.getElementById('search-overlay');
+    if (!o) return;
+    o.style.display = 'flex';
+    o.classList.remove('hidden');
+    if (!pfLoaded) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet'; link.href = '/pagefind/pagefind-ui.css';
+      document.head.appendChild(link);
+      var s = document.createElement('script');
+      s.src = '/pagefind/pagefind-ui.js';
+      s.onload = function() {
+        if (window.PagefindUI) {
+          new window.PagefindUI({ element: '#pagefind-container', showSubResults: true, showImages: false });
+          pfLoaded = true;
+          setTimeout(function(){ var i = document.querySelector('.pagefind-ui__search-input'); if(i) i.focus(); }, 200);
+        }
+      };
+      document.head.appendChild(s);
+    } else {
+      setTimeout(function(){ var i = document.querySelector('.pagefind-ui__search-input'); if(i) i.focus(); }, 100);
+    }
+  }
+  function closeSearch() {
+    var o = document.getElementById('search-overlay');
+    if (o) { o.style.display = 'none'; o.classList.add('hidden'); }
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)) { e.preventDefault(); openSearch(); }
+    if (e.key === 'Escape') closeSearch();
+  });
+  document.getElementById('search-overlay')?.addEventListener('click', function(e) { if (e.target === e.currentTarget) closeSearch(); });
+  window.openSearch = openSearch;
+</script>
+
+<style is:global>
+  .pagefind-ui__search-input { border: 2px solid #E3EFF8 !important; border-radius: 0.5rem !important; padding: 0.75rem 1rem !important; font-size: 1rem !important; width: 100% !important; box-sizing: border-box !important; }
+  .pagefind-ui__search-input:focus { border-color: #D4A843 !important; outline: none !important; box-shadow: 0 0 0 3px rgba(212,168,67,0.15) !important; }
+  .pagefind-ui__result-link { color: #1E3A5F !important; font-weight: 600 !important; }
+  .pagefind-ui__result-excerpt { color: #5A8AB5 !important; }
+  .pagefind-ui__form::before { display: none !important; }
+</style>

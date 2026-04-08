@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://senar.tech/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Changelog -->
+  <url>
+    <loc>https://senar.tech/en/changelog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/changelog/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/changelog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/changelog/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Core -->
+  <url>
+    <loc>https://senar.tech/en/core/senar-core/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/core/senar-core/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/core/senar-core/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/core/senar-core/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/core/senar-core/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/core/senar-core/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Standard EN -->
+  <url>
+    <loc>https://senar.tech/en/standard/introduction/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/introduction/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/introduction/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/scope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/scope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/scope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/normative-refs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/normative-refs/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/normative-refs/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/terms/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/roles/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/roles/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/roles/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/agent-instrumentation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/agent-instrumentation/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/agent-instrumentation/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/units-of-work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/units-of-work/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/units-of-work/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/ceremonies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/ceremonies/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/ceremonies/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/quality-gates/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/quality-gates/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/quality-gates/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/metrics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/metrics/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/metrics/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/rules/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/rules/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/rules/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/configurations/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/configurations/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/configurations/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/maturity-model/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/maturity-model/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/maturity-model/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/standard/conformance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/conformance/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/conformance/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Standard RU -->
+  <url>
+    <loc>https://senar.tech/ru/standard/introduction/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/introduction/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/introduction/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/scope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/scope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/scope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/normative-refs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/normative-refs/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/normative-refs/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/terms/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/roles/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/roles/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/roles/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/agent-instrumentation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/agent-instrumentation/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/agent-instrumentation/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/units-of-work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/units-of-work/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/units-of-work/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/ceremonies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/ceremonies/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/ceremonies/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/quality-gates/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/quality-gates/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/quality-gates/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/metrics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/metrics/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/metrics/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/rules/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/rules/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/rules/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/configurations/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/configurations/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/configurations/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/maturity-model/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/maturity-model/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/maturity-model/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/standard/conformance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/standard/conformance/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/standard/conformance/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Guide EN -->
+  <url>
+    <loc>https://senar.tech/en/guide/quickstart/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/quickstart/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/quickstart/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/philosophy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/philosophy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/philosophy/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/ai-review-checklist/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/ai-review-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/ai-review-checklist/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/walkthrough/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/walkthrough/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/walkthrough/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/transition-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/transition-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/transition-guide/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/safe-comparison/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/safe-comparison/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/safe-comparison/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/failure-modes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/failure-modes/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/failure-modes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/requirements/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/requirements/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/requirements/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/legacy-adoption/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/legacy-adoption/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/legacy-adoption/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/worked-example/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/worked-example/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/worked-example/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/tool-guides/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/tool-guides/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/tool-guides/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/agent-configuration/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/agent-configuration/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/agent-configuration/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/guide/onboarding/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/onboarding/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/onboarding/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Guide RU -->
+  <url>
+    <loc>https://senar.tech/ru/guide/quickstart/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/quickstart/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/quickstart/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/philosophy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/philosophy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/philosophy/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/ai-review-checklist/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/ai-review-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/ai-review-checklist/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/walkthrough/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/walkthrough/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/walkthrough/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/transition-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/transition-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/transition-guide/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/safe-comparison/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/safe-comparison/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/safe-comparison/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/failure-modes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/failure-modes/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/failure-modes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/requirements/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/requirements/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/requirements/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/legacy-adoption/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/legacy-adoption/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/legacy-adoption/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/worked-example/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/worked-example/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/worked-example/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/tool-guides/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/tool-guides/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/tool-guides/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/agent-configuration/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/agent-configuration/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/agent-configuration/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/guide/onboarding/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/guide/onboarding/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/guide/onboarding/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Reference EN -->
+  <url>
+    <loc>https://senar.tech/en/reference/glossary/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/glossary/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/reference/scaling-ratios/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/scaling-ratios/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/scaling-ratios/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/reference/efficiency-model/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/efficiency-model/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/efficiency-model/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/reference/governance-compliance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/governance-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/governance-compliance/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/reference/tooling-requirements/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/tooling-requirements/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/tooling-requirements/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/en/reference/code-standards-template/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/code-standards-template/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/code-standards-template/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Reference RU -->
+  <url>
+    <loc>https://senar.tech/ru/reference/glossary/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/glossary/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/glossary/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/reference/scaling-ratios/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/scaling-ratios/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/scaling-ratios/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/reference/efficiency-model/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/efficiency-model/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/efficiency-model/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/reference/governance-compliance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/governance-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/governance-compliance/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/reference/tooling-requirements/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/tooling-requirements/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/tooling-requirements/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://senar.tech/ru/reference/code-standards-template/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://senar.tech/en/reference/code-standards-template/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://senar.tech/ru/reference/code-standards-template/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
